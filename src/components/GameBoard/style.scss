@@ -1,0 +1,61 @@
+$charBoxWidth: 30px !default;
+$charBoxHeight: 30px !default;
+$charBoxRowGap: 3px !default;
+$hasPointerCharBoxBgColor: #03a9f4 !default;
+$hasPointerCharBoxHoverBgColor: #5C6BC0 !default;
+$hasPointerCharBoxLastRowBgColor: #03a9f4 !default;
+$activatedRowCharBoxBgColor: rgb(206, 206, 206) !default;
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  .char-box {
+    text-align: center;
+    width: $charBoxWidth;
+    height: $charBoxHeight;
+    transition: all .3s ease;
+    border: 1px solid #c0c0c0;
+    cursor: default;
+
+    &.has-pointer {
+      cursor: pointer;
+
+      &:hover {
+        background-color: $hasPointerCharBoxHoverBgColor;
+        color: #fff;
+      }
+    }
+  }
+
+  &.activated {
+    .char-box {
+      background-color: $activatedRowCharBoxBgColor;
+    }
+  }
+
+  &.active-row {
+    .char-box {
+      background-color: $hasPointerCharBoxBgColor;
+    }
+  }
+
+  &.last-row {
+    &.activated {
+      .char-box {
+        background-color: $hasPointerCharBoxBgColor;
+        color: #fff;
+      }
+    }
+
+    &:not(.activated) {
+      .char-box {
+        // background-color: $hasPointerCharBoxLastRowBgColor;
+        color: rgba(#000, .2);
+      }
+    }
+  }
+}
