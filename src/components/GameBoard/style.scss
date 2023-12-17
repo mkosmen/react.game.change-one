@@ -53,14 +53,11 @@ $activatedRowCharBoxBgColor: rgb(206, 206, 206) !default;
 
     &:not(.activated) {
       .char-box {
-        // background-color: $hasPointerCharBoxLastRowBgColor;
         color: rgba(#000, .2);
-      }
-    }
 
-    .char-box {
-      &:after {
-        content: attr(data-key);
+        &:after {
+          content: attr(data-key);
+        }
       }
     }
   }
