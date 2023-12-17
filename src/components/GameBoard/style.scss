@@ -57,6 +57,12 @@ $activatedRowCharBoxBgColor: rgb(206, 206, 206) !default;
         color: rgba(#000, .2);
       }
     }
+
+    .char-box {
+      &:after {
+        content: attr(data-key);
+      }
+    }
   }
 }
 

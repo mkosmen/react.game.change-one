@@ -74,8 +74,6 @@ function GameBoard(props: Props) {
         setActivePoint(null);
         setActiveIndex((old) => old + 1);
       }
-
-      
     }
 
     window.addEventListener("keyup", keyUpHandler);
@@ -115,6 +113,7 @@ function GameBoard(props: Props) {
                           cellIndex === activePoint.cellIndex,
                       })}
                       key={cellIndex}
+                      data-key={lastRow ? props.word[1][cellIndex] : ""}
                       onClick={() =>
                         hasPointer
                           ? clickCharBoxHandler({ rowIndex, cellIndex })
