@@ -13,14 +13,13 @@ type ActivePoint = {
 
 function GameBoard(props: Props) {
   const middRowEachBoxCount = props.word[0].length;
-  const midRowsCount = middRowEachBoxCount - 2;
+  const midRowsCount = middRowEachBoxCount - 1;
 
   const allRows = [
     [...props.word[0]],
     ...[...Array(midRowsCount).keys()].map(() =>
       Array(middRowEachBoxCount).fill("")
     ),
-    [...props.word[1]],
   ];
 
   const [rows, setRows] = useState<string[][]>(allRows);
@@ -45,6 +44,7 @@ function GameBoard(props: Props) {
     function keyUpHandler(ev: KeyboardEvent) {
       const pressedKey = ev.key;
       const IsKeyALetterChar = keyReg.test(pressedKey);
+
       if (pressedKey === "Escape") {
         setActivePoint(null);
         setRows((old) => {
@@ -74,6 +74,8 @@ function GameBoard(props: Props) {
         setActivePoint(null);
         setActiveIndex((old) => old + 1);
       }
+
+      
     }
 
     window.addEventListener("keyup", keyUpHandler);
