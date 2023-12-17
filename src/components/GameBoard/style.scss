@@ -12,6 +12,13 @@ $activatedRowCharBoxBgColor: rgb(206, 206, 206) !default;
   align-items: center;
 }
 
+.game-table {
+  &-outer {
+    position: relative;
+    padding: 1rem;
+  }
+}
+
 .row {
   .char-box {
     text-align: center;
@@ -51,6 +58,14 @@ $activatedRowCharBoxBgColor: rgb(206, 206, 206) !default;
       }
     }
 
+    &.next-active-row {
+      .char-box {
+        &:after {
+          display: none !important;
+        }
+      }
+    }
+
     &:not(.activated) {
       .char-box {
         color: rgba(#000, .2);
@@ -66,6 +81,20 @@ $activatedRowCharBoxBgColor: rgb(206, 206, 206) !default;
 .note {
   margin-top: 1rem;
   max-width: 320px;
-  text-align: center;
   font-size: 14px;
+
+  .title {
+    padding-bottom: .25rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      line-height: 1.5;
+    }
+  }
 }
