@@ -133,6 +133,7 @@ function GameBoard(props: Props) {
         Please click on the cell you want to change and then press any letter on
         the keyboard.
         <br />
+        <br />
         if you want to cancel entering the letter, you can press the ESC key
       </div>
     </div>

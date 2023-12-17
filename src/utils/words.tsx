@@ -6,4 +6,25 @@ export default [
      */
     "KASET",
   ],
+  [
+    "SEZER",
+    /**
+     * 'SÖZER', 'SÖKER', 'DÖKER',
+     */
+    "DİKER",
+  ],
+  [
+    "BALIK",
+    /**
+     * 'BATIK', 'BATAK', 'YATAK',
+     */
+    "YAMAK",
+  ],
+  [
+    "BEYAZ",
+    /**
+     * 'BEYAN', 'BAYAN', 'BAKAN',
+     */
+    "HAKAN",
+  ]
 ];
