@@ -128,6 +128,11 @@ function GameBoard(props: Props) {
           })}
         </tbody>
       </table>
+
+      <div className="note">
+        Please click on the cell you want to change and then press any letter on
+        the keyboard.
+      </div>
     </div>
   );
 }
