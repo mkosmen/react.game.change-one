@@ -132,6 +132,8 @@ function GameBoard(props: Props) {
       <div className="note">
         Please click on the cell you want to change and then press any letter on
         the keyboard.
+        <br />
+        if you want to cancel entering the letter, you can press the ESC key
       </div>
     </div>
   );
